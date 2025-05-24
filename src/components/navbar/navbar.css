@@ -9,20 +9,25 @@
 }
 
 .loading {
-    width: auto;
-    height: 100%;
-    background-image: url('./sprites/tcIcon.png');
+  width: 150px;
+  height: 150px;
+  background-image: url('./sprites/tcIcon.png');
+  background-position: 0 0;
+  background-size: 150px 4500px;
+  background-repeat: no-repeat;
+  animation: slide 3s steps(29) infinite;
+}
+
+@keyframes slide {
+  0% {
     background-position: 0 0;
-    background-size: 150px 4500px;
-    background-repeat: no-repeat;
-    animation: slide 1s steps(30) forwards;
   }
 
-  @keyframes slide {
-    0% {
-      background-position: 0 0;
-    }
-    100% {
-      background-position: 0 -4500px;
-    }
+  33.33% {
+    background-position: 0 -4350px; /* Frame 30 (al 1s) */
   }
+
+  100% {
+    background-position: 0 -4350px; /* Mantener el último frame durante 2s */
+  }
+}
