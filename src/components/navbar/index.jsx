@@ -1,5 +1,4 @@
-import menuIconWhite from './svg/menuWhite.svg'
-import menuIconBlack from './svg/menuBlack.svg'
+import Hamburger from '../buttonMenu'
 import './navbar.css'
 
 export default function Navbar(){
@@ -14,7 +13,7 @@ export default function Navbar(){
         
         <div className="menuContainer">
           <div className="hamburguerContainer"> 
-            <img src={menuIconWhite} alt="" />
+            <Hamburger color="white" />
           </div>
           <div className="linksContainer">
             <p style={{color:"white"}}>About</p>
@@ -33,7 +32,7 @@ export default function Navbar(){
         
         <div className="menuContainerWhite">
           <div className="hamburguerContainer"> 
-            <img src={menuIconBlack} alt="" />
+            <Hamburger color="black" />
           </div>
           <div className="linksContainer">
             <p style={{color:"black"}}>About</p>
