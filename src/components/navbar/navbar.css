@@ -4,6 +4,7 @@
   align-items: center;
   justify-content: space-between;
   margin: 2rem 0;
+  padding: 0 1rem;
 }
 
 .navbarContainerWhite{
@@ -15,10 +16,10 @@
 }
 
 .animatedLogoContainerTc{
-  width: 150px;
+  width: 250px;
   display: flex;
-  justify-content: center;
   align-items: center;
+
 }
 
 .animatedLogoContainerDevsafio{
@@ -28,15 +29,16 @@
   align-items: center;
 }
 
-.loadingTc {
+/* .loadingTc {
   width: 150px;
   height: 120px;
   background-position: 0 0;
   background-size: 150px 4500px;
   background-repeat: no-repeat;
   background-image: url("./sprites/tcIcon.png");
-  animation: slideTc 3s steps(29) infinite;
-}
+  animation: slideTc 3s steps(46) infinite;
+} */
+
 
 .loadingDevsafio {
   width: 274px;
@@ -48,7 +50,7 @@
   animation: slideDevsafio 3s steps(16) infinite;
 }
 
-@keyframes slideTc {
+/* @keyframes slideTc {
   0% {
     background-position: 0 0;
   }
@@ -60,7 +62,30 @@
   100% {
     background-position: 0 -4350px;
   }
+} */
+
+.loadingTc {
+  width: 125px;                         /* 250 / 2 */
+  height: 125px;                        /* 250 / 2 */
+  background-position: 0 0;
+  background-size: 125px 5875px;       /* 11750 / 2 */
+  background-repeat: no-repeat;
+  background-image: url("./sprites/tcIcon.png");
+  animation: slideTc 3s steps(46) infinite;             /* Puedes quitar esto si solo era para debug */
 }
+
+@keyframes slideTc {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 0 -5750px;    /* 125px * 46 = 5750px (no 5875) */
+  }
+  100% {
+    background-position: 0 -5750px;    /* 125px * 46 = 5750px (no 5875) */
+  }
+}
+
 
 @keyframes slideDevsafio {
   0% {
