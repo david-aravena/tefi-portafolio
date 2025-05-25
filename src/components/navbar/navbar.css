@@ -1,16 +1,20 @@
 .navbarContainer{
   display: flex;
   background-color: black;
+  align-items: center;
 }
 
 .animatedLogoContainer{
   width: 150px;
-  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-y: hidden;
 }
 
 .loading {
   width: 150px;
-  height: 150px;
+  height: 120px;
   background-image: url('./sprites/tcIcon.png');
   background-position: 0 0;
   background-size: 150px 4500px;
@@ -30,4 +34,20 @@
   100% {
     background-position: 0 -4350px; /* Mantener el último frame durante 2s */
   }
+}
+
+.bodyContainer{
+  height: 100%;
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.menuContainer{
+  padding: 1rem;
+}
+
+p{
+  color: white;
+  margin: 0 1rem;
 }

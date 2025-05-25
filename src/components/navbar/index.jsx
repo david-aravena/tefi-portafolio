@@ -12,7 +12,9 @@ export default function Navbar(){
         </div>
 
         <div className="bodyContainer">
-
+          <p>About</p>
+          <p>Contact</p>
+          <p>Home</p>
         </div>
         
         <div className="menuContainer"> 
