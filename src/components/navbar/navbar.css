@@ -2,6 +2,7 @@
   display: flex;
   background-color: black;
   align-items: center;
+  justify-content: space-between;
 }
 
 .animatedLogoContainer{
@@ -9,7 +10,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow-y: hidden;
 }
 
 .loading {
@@ -36,13 +36,6 @@
   }
 }
 
-.bodyContainer{
-  height: 100%;
-  flex-grow: 1;
-  display: flex;
-  justify-content: center;
-}
-
 .menuContainer{
   padding: 1rem;
 }
@@ -50,4 +43,23 @@
 p{
   color: white;
   margin: 0 1rem;
+}
+
+.linksContainer{
+    display: block;
+    display: flex;
+  }
+
+  .hamburguerContainer{
+    display: none;
+  }
+
+@media (max-width: 800px) {
+  .hamburguerContainer{
+    display: block;
+  }
+
+  .linksContainer{
+    display: none;
+  }
 }

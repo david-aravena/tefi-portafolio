@@ -10,15 +10,16 @@ export default function Navbar(){
 
           </div>
         </div>
-
-        <div className="bodyContainer">
-          <p>About</p>
-          <p>Contact</p>
-          <p>Home</p>
-        </div>
         
-        <div className="menuContainer"> 
-          <img src={menuIcon} alt="" />
+        <div className="menuContainer">
+          <div className="hamburguerContainer"> 
+            <img src={menuIcon} alt="" />
+          </div>
+          <div className="linksContainer">
+            <p>About</p>
+            <p>Contact</p>
+            <p>Home</p>
+          </div>
         </div>
       </div>
     </>
