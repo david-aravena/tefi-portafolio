@@ -31,7 +31,7 @@ export default function Navbar(){
           </div>
         </div>
         
-        <div className="menuContainer">
+        <div className="menuContainerWhite">
           <div className="hamburguerContainer"> 
             <img src={menuIconBlack} alt="" />
           </div>

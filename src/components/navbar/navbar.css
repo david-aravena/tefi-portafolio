@@ -9,10 +9,12 @@
 
 .navbarContainerWhite{
   display: flex;
-  background-color: white;
+  background-color: #f8f7f7;
   align-items: center;
   justify-content: space-between;
-  margin: 2rem 0;
+  padding: 0 1rem;
+  border: 4px solid blue;
+  border-radius: 10px;
 }
 
 .animatedLogoContainerTc{
@@ -25,44 +27,19 @@
 .animatedLogoContainerDevsafio{
   width: 270px;
   display: flex;
-  justify-content: center;
   align-items: center;
 }
 
-/* .loadingTc {
-  width: 150px;
-  height: 120px;
-  background-position: 0 0;
-  background-size: 150px 4500px;
-  background-repeat: no-repeat;
-  background-image: url("./sprites/tcIcon.png");
-  animation: slideTc 3s steps(46) infinite;
-} */
-
 
 .loadingDevsafio {
-  width: 274px;
-  height: 84px;
+  width: 159px;
+  height: 53px;
   background-position: 0 0;
-  background-size: 254px 1408px;
+  background-size: 159px 845px; /* 16 frames * 53px */
   background-repeat: no-repeat;
   background-image: url("./sprites/devsafioIcon.png");
-  animation: slideDevsafio 3s steps(16) infinite;
+  animation: slideDevsafio 2s steps(16) infinite;
 }
-
-/* @keyframes slideTc {
-  0% {
-    background-position: 0 0;
-  }
-
-  33.33% {
-    background-position: 0 -4350px;
-  }
-
-  100% {
-    background-position: 0 -4350px;
-  }
-} */
 
 .loadingTc {
   width: 125px;                         /* 250 / 2 */
@@ -87,15 +64,17 @@
 }
 
 
+
+
 @keyframes slideDevsafio {
   0% {
     background-position: 0 0;
   }
-  33.33% {
-    background-position: 0 -1324px; /* 16 * 84 */
+  50% {
+    background-position: 0 -795px; /* 53px * (16 - 1) */
   }
   100% {
-    background-position: 0 -1324px;
+    background-position: 0 -795px;
   }
 }
 
