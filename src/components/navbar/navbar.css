@@ -1,38 +1,76 @@
-.navbarContainer{
+.navbarContainerBlack{
   display: flex;
   background-color: black;
   align-items: center;
   justify-content: space-between;
+  margin: 2rem 0;
 }
 
-.animatedLogoContainer{
+.navbarContainerWhite{
+  display: flex;
+  background-color: white;
+  align-items: center;
+  justify-content: space-between;
+  margin: 2rem 0;
+}
+
+.animatedLogoContainerTc{
   width: 150px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.loading {
+.animatedLogoContainerDevsafio{
+  width: 270px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loadingTc {
   width: 150px;
   height: 120px;
-  background-image: url('./sprites/tcIcon.png');
   background-position: 0 0;
   background-size: 150px 4500px;
   background-repeat: no-repeat;
-  animation: slide 3s steps(29) infinite;
+  background-image: url("./sprites/tcIcon.png");
+  animation: slideTc 3s steps(29) infinite;
 }
 
-@keyframes slide {
+.loadingDevsafio {
+  width: 274px;
+  height: 84px;
+  background-position: 0 0;
+  background-size: 254px 1408px;
+  background-repeat: no-repeat;
+  background-image: url("./sprites/devsafioIcon.png");
+  animation: slideDevsafio 3s steps(16) infinite;
+}
+
+@keyframes slideTc {
   0% {
     background-position: 0 0;
   }
 
   33.33% {
-    background-position: 0 -4350px; /* Frame 30 (al 1s) */
+    background-position: 0 -4350px;
   }
 
   100% {
-    background-position: 0 -4350px; /* Mantener el último frame durante 2s */
+    background-position: 0 -4350px;
+  }
+}
+
+@keyframes slideDevsafio {
+  0% {
+    background-position: 0 0;
+  }
+  33.33% {
+    background-position: 0 -1324px; /* 16 * 84 */
+  }
+  100% {
+    background-position: 0 -1324px;
   }
 }
 
