@@ -23,6 +23,25 @@ export default function Navbar(){
         </div>
       </div>
 
+      <div className="navbarContainerCriollito">
+        <div className="animatedLogoContainerCriollito">
+          <div className="loadingCriollito">
+
+          </div>
+        </div>
+        
+        <div className="menuContainerWhite">
+          <div className="hamburguerContainer"> 
+            <Hamburger color="#cc0000" />
+          </div>
+          <div className="linksContainer">
+            <p style={{color:"black"}}>About</p>
+            <p style={{color:"black"}}>Contact</p>
+            <p style={{color:"black"}}>Home</p>
+          </div>
+        </div>
+      </div>
+
       <div className="navbarContainerWhite">
         <div className="animatedLogoContainerDevsafio">
           <div className="loadingDevsafio">
@@ -32,7 +51,7 @@ export default function Navbar(){
         
         <div className="menuContainerWhite">
           <div className="hamburguerContainer"> 
-            <Hamburger color="black" />
+            <Hamburger color="blue" />
           </div>
           <div className="linksContainer">
             <p style={{color:"black"}}>About</p>
