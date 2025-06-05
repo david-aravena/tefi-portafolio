@@ -9,7 +9,7 @@
 
 .navbarContainerWhite{
   display: flex;
-  background-color: #f8f7f7;
+  background-color: white;
   align-items: center;
   justify-content: space-between;
   padding: 0 1rem;

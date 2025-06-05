@@ -3,7 +3,7 @@ import './navbar.css'
 
 export default function Navbar(){
   return(
-    <>
+    <div style={{fontFamily: 'montserrat'}}>
       <div className="navbarContainerBlack">
         <div className="animatedLogoContainerTc">
           <div className="loadingTc">
@@ -35,9 +35,9 @@ export default function Navbar(){
             <Hamburger color="#cc0000" />
           </div>
           <div className="linksContainer">
-            <p style={{color:"black"}}>About</p>
-            <p style={{color:"black"}}>Contact</p>
-            <p style={{color:"black"}}>Home</p>
+            <p style={{color:"red"}}>About</p>
+            <p style={{color:"red"}}>Contact</p>
+            <p style={{color:"red"}}>Home</p>
           </div>
         </div>
       </div>
@@ -60,6 +60,6 @@ export default function Navbar(){
           </div>
         </div>
       </div>
-    </>
+    </div>
   )
 }
