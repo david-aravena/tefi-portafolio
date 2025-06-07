@@ -1,62 +1,57 @@
 import Hamburger from '../buttonMenu'
 import './navbar.css'
 
-export default function Navbar(){
-  return(
-    <div style={{fontFamily: 'montserrat'}}>
-      <div className="navbarContainerBlack">
-        <div className="animatedLogoContainerTc">
-          <div className="loadingTc">
+const VARIANTS = {
+  black: {
+    containerClass: 'navbarContainerBlack',
+    logoClass: 'animatedLogoContainerTc',
+    loadingClass: 'loadingTc',
+    menuClass: 'menuContainer',
+    hamburgerColor: 'white',
+    linkColor: 'white'
+  },
+  criollito: {
+    containerClass: 'navbarContainerCriollito',
+    logoClass: 'animatedLogoContainerCriollito',
+    loadingClass: 'loadingCriollito',
+    menuClass: 'menuContainerWhite',
+    hamburgerColor: '#cc0000',
+    linkColor: 'red'
+  },
+  white: {
+    containerClass: 'navbarContainerWhite',
+    logoClass: 'animatedLogoContainerDevsafio',
+    loadingClass: 'loadingDevsafio',
+    menuClass: 'menuContainerWhite',
+    hamburgerColor: 'blue',
+    linkColor: 'black'
+  }
+}
 
-          </div>
+export default function Navbar({ variant = 'white' }) {
+  const {
+    containerClass,
+    logoClass,
+    loadingClass,
+    menuClass,
+    hamburgerColor,
+    linkColor
+  } = VARIANTS[variant] || VARIANTS.black
+
+  return (
+    <div style={{ fontFamily: 'montserrat' }}>
+      <div className={containerClass}>
+        <div className={logoClass}>
+          <div className={loadingClass}></div>
         </div>
-        
-        <div className="menuContainer">
-          <div className="hamburguerContainer"> 
-            <Hamburger color="white" />
+        <div className={menuClass}>
+          <div className="hamburguerContainer">
+            <Hamburger color={hamburgerColor} />
           </div>
           <div className="linksContainer">
-            <p style={{color:"white"}}>About</p>
-            <p style={{color:"white"}}>Contact</p>
-            <p style={{color:"white"}}>Home</p>
-          </div>
-        </div>
-      </div>
-
-      <div className="navbarContainerCriollito">
-        <div className="animatedLogoContainerCriollito">
-          <div className="loadingCriollito">
-
-          </div>
-        </div>
-        
-        <div className="menuContainerWhite">
-          <div className="hamburguerContainer"> 
-            <Hamburger color="#cc0000" />
-          </div>
-          <div className="linksContainer">
-            <p style={{color:"red"}}>About</p>
-            <p style={{color:"red"}}>Contact</p>
-            <p style={{color:"red"}}>Home</p>
-          </div>
-        </div>
-      </div>
-
-      <div className="navbarContainerWhite">
-        <div className="animatedLogoContainerDevsafio">
-          <div className="loadingDevsafio">
-
-          </div>
-        </div>
-        
-        <div className="menuContainerWhite">
-          <div className="hamburguerContainer"> 
-            <Hamburger color="blue" />
-          </div>
-          <div className="linksContainer">
-            <p style={{color:"black"}}>About</p>
-            <p style={{color:"black"}}>Contact</p>
-            <p style={{color:"black"}}>Home</p>
+            <p style={{ color: linkColor }}>About</p>
+            <p style={{ color: linkColor }}>Contact</p>
+            <p style={{ color: linkColor }}>Home</p>
           </div>
         </div>
       </div>
