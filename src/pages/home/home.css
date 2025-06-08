@@ -1,0 +1,7 @@
+.containerLogos, .containerComponents{
+  width: auto;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

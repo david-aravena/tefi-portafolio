@@ -3,7 +3,7 @@ import { Suspense, lazy } from 'react';
 import Menu from './components/menu/'
 import './App.css'
 
-const Home = lazy(() => import('./components/home/'));
+const Home = lazy(() => import('./pages/home/'));
 const Navbar = lazy(() => import('./components/navbar/'));
 
 function App() {
@@ -15,8 +15,8 @@ function App() {
       </div>
       <Suspense fallback={<div>Cargando...</div>}>
         <Routes>
-          <Route path="/" element={<Navbar />} />
-          <Route path="/home" element={<Home />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/nosotros" element={<Navbar />} />
         </Routes>
       </Suspense>
     </BrowserRouter>
