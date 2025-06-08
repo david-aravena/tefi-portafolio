@@ -1,7 +1,30 @@
-.containerLogos, .containerComponents{
-  width: auto;
+.containerHome{
+  width: 100vw;
   height: 50vh;
+  position: absolute; 
+  top: 50%; 
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: space-around;
+}
+
+.containerLogos, .containerComponents{
+  width: 50%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+
+@media (max-width: 1000px) {
+  .containerHome {
+    flex-direction: column;
+    height: 75vh;
+  }
+  
+  .containerLogos, .containerComponents {
+    width: 100%;
+    height: 40%;
+  }
+}
+

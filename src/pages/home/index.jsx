@@ -2,14 +2,7 @@ import './home.css'
 
 export default function Home(){
   return(
-    <div style={{
-      width:"100vw", 
-      position:"absolute", 
-      top:"50%", 
-      transform: "translateY(-50%)",
-      display:"flex",
-      justifyContent:"space-around"
-    }}>
+    <div className="containerHome">
       <div className="containerLogos">
         <img src="/images/imagenLogosAnimados.png" alt="Imagen Logos Animados" style={{height:"100%"}} />
         <h2>Logos animados</h2>
