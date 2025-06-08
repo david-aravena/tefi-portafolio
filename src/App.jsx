@@ -10,15 +10,20 @@ function App() {
 
   return (
     <BrowserRouter>
-      <div style={{position:"absolute", bottom:0, right:8}}>
-        <Menu />
+      <div style={{ display: 'flex', flexDirection: 'column', height: '100vh' }}>
+        <div style={{ flex: 1, overflow: 'auto'}}>
+          <Suspense fallback={<div>Cargando...</div>}>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/nosotros" element={<Navbar />} />
+            </Routes>
+          </Suspense>
+        </div>
+
+        <div>
+          <Menu />
+        </div>
       </div>
-      <Suspense fallback={<div>Cargando...</div>}>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/nosotros" element={<Navbar />} />
-        </Routes>
-      </Suspense>
     </BrowserRouter>
   )
 }
