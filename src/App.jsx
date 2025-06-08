@@ -11,7 +11,7 @@ function App() {
   return (
     <BrowserRouter>
       <div style={{ display: 'flex', flexDirection: 'column', height: '100vh' }}>
-        <div style={{ flex: 1, overflow: 'auto'}}>
+        <div style={{ flex: 1, overflow: 'auto', display:"flex", justifyContent:"center", alignItems:"center"}}>
           <Suspense fallback={<div>Cargando...</div>}>
             <Routes>
               <Route path="/" element={<Home />} />
