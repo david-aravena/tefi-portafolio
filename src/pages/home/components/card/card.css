@@ -1,7 +1,39 @@
-.card{
+/* .card{
   background-color: white;
   flex: 0 0 30%;
   overflow: hidden;
+} */
+
+.card{
+  height: 300px;
+  width: 200px;
+  border: 2px solid red;
+  position: relative;
+}
+
+.containerCards{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+}
+
+.containerCardUp{
+  width: 100%;
+  height: 50%;
+  background-color: blueviolet;
+  display: flex;
+  justify-content: center;
+}
+
+.containerCardDown{
+  width: 100%;
+  height: 50%;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
 }
 
 .containerCardImage{

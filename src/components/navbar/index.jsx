@@ -1,4 +1,4 @@
-import Hamburger from '../buttonMenu'
+import Hamburger from '../../pages/home/components/buttonMenu'
 import './navbar.css'
 
 const VARIANTS = {
