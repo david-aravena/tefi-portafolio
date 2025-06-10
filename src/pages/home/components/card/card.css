@@ -1,11 +1,22 @@
 .card{
   background-color: white;
   flex: 0 0 30%;
+  overflow: hidden;
 }
 
 .containerCardImage{
   width: 100%;
   height: 60%;
+  display: flex;
+  align-items: center;
+}
+
+.containerCardTitle{
+  padding: 0 8px;
+}
+
+.containerCardDescription{
+  padding: 0 8px;
 }
 
 @media (max-width: 800px) {

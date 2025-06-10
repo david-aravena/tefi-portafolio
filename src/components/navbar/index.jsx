@@ -28,7 +28,7 @@ const VARIANTS = {
   }
 }
 
-export default function Navbar({ variant = 'white' }) {
+export default function Navbar({ variant = 'black' }) {
   const {
     containerClass,
     logoClass,
