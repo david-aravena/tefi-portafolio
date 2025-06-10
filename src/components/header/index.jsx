@@ -2,7 +2,7 @@ import { Link, useLocation } from 'react-router';
 import './header.css'
 
 
-export default function Header({padding}) {
+export default function Header({padding, onclick}) {
 
   const location = useLocation();
   const isRoot = location.pathname === "/";
@@ -24,7 +24,7 @@ export default function Header({padding}) {
         </div>
       </div>
 
-      <div>
+      <div onClick={() => onclick(true)}>
         <h2>Nosotros</h2>
       </div>
 

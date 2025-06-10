@@ -2,20 +2,24 @@ import { useState, useEffect } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router';
 import { Suspense, lazy } from 'react';
 import Header from './components/header'
+import ShowComponent from './components/showComponent';
 import './App.css'
 
 const Home = lazy(() => import('./pages/home/'));
+const Nosotros = lazy(() => import('./components/nosotros/'));
 
 function App() {
 
   const isMobile = useIsMobile();
   const paddingHeaderFooter = isMobile ? "0 1rem" : "0 5rem";
+  const [nosotrosSelected, setNosotrosSelected] = useState(false);
 
   return (
+    <>
     <BrowserRouter>
       <div style={{ display: 'flex', flexDirection: 'column', height: '100vh' }}>
         <div>
-          <Header padding={paddingHeaderFooter} />
+          <Header padding={paddingHeaderFooter} onclick={setNosotrosSelected} />
         </div>
         <div style={{ flex: 1, overflow: 'auto', display:"flex", justifyContent:"center", alignItems:"center"}}>
           <Suspense fallback={<div>Cargando...</div>}>
@@ -30,6 +34,15 @@ function App() {
         </div>
       </div>
     </BrowserRouter>
+
+    {nosotrosSelected && (
+      <ShowComponent close={() => setNosotrosSelected(false)}>
+  
+          <Nosotros />
+    
+      </ShowComponent>
+    )}
+    </>
   )
 }
 

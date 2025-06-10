@@ -2,9 +2,11 @@ import { useState } from 'react'
 import CardComponent from './components/card'
 import Navbar from '../../components/navbar'
 import ButtonSpinner from './components/button'
+import Nosotros from '../../components/nosotros'
 import './home.css'
+import ShowComponent from '../../components/showComponent'
 
-export default function Home({width}){
+export default function Home({Nosotros, width}){
 
   const [components] = useState([
     {
@@ -35,26 +37,15 @@ export default function Home({width}){
 
 
       {selectedComponent && (
-        <div style={{
-          position:"absolute", 
-          top:0, 
-          left:0, 
-          width:"100%", 
-          height:"100%", 
-          display:"flex", 
-          justifyContent:"center", 
-          alignItems:"center",
-          background: "rgba(255,255,255,0.4)",
-          backdropFilter: "blur(10px)",       
-          WebkitBackdropFilter: "blur(10px)"
-        }}>
-          <div style={{position:"absolute", top:0, right:0}}>
-            <button onClick={() => setSelectedComponent(null)}>CERRAR</button>
-          </div>
+        <ShowComponent close={() => setSelectedComponent(null)}>
           {selectedComponent === "Boton Spinner" && (
             <ButtonSpinner />
           )}
-        </div>
+
+          {selectedComponent === "Nosotros" && (
+            Nosotros
+          )}
+        </ShowComponent>
       )}
     </>
   )
